@@ -5,7 +5,7 @@
 	<modelVersion>4.0.0</modelVersion>
 
 	<groupId>com.senomas</groupId>
-	<artifactId>senomas-common</artifactId>
+	<artifactId>senomas-boot-util</artifactId>
 	<version>1.0.0</version>
 	<packaging>jar</packaging>
 
