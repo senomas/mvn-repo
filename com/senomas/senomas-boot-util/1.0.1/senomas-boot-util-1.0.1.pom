@@ -1,11 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+
 	<modelVersion>4.0.0</modelVersion>
-	<groupId>id.co.hanoman</groupId>
-	<artifactId>hanoman-security</artifactId>
-	<version>1.0.0</version>
+
+	<groupId>com.senomas</groupId>
+	<artifactId>senomas-boot-util</artifactId>
+	<version>1.0.1</version>
 	<packaging>jar</packaging>
-	<name>hanoman-security</name>
+	<name>senomas boot util</name>
 
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
@@ -13,12 +16,6 @@
 
 		<github.global.server>github</github.global.server>
 	</properties>
-
-	<parent>
-		<groupId>org.springframework.boot</groupId>
-		<artifactId>spring-boot-starter-parent</artifactId>
-		<version>1.2.5.RELEASE</version>
-	</parent>
 
 	<distributionManagement>
 		<repository>
@@ -32,42 +29,35 @@
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-web</artifactId>
-			<scope>provided</scope>
-		</dependency>
-
-		<dependency>
-			<groupId>org.springframework.boot</groupId>
-			<artifactId>spring-boot-starter-security</artifactId>
-			<scope>provided</scope>
-		</dependency>
-		
-		<dependency>
-			<groupId>org.springframework.boot</groupId>
-			<artifactId>spring-boot-starter-tomcat</artifactId>
-			<scope>provided</scope>
-		</dependency>
-
-		<dependency>
-			<groupId>com.fasterxml.jackson.dataformat</groupId>
-			<artifactId>jackson-dataformat-yaml</artifactId>
+			<version>1.2.5.RELEASE</version>
 			<scope>provided</scope>
 		</dependency>
 
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-data-jpa</artifactId>
+			<version>1.2.5.RELEASE</version>
 			<scope>provided</scope>
 		</dependency>
 
 		<dependency>
-			<groupId>com.senomas</groupId>
-			<artifactId>senomas-boot-util</artifactId>
-			<version>1.0.0</version>
-			<scope>provided</scope>
+			<groupId>commons-codec</groupId>
+			<artifactId>commons-codec</artifactId>
+			<version>1.10</version>
+			<scope>compile</scope>
+		</dependency>
+
+		<dependency>
+			<groupId>commons-io</groupId>
+			<artifactId>commons-io</artifactId>
+			<version>2.4</version>
+			<scope>compile</scope>
 		</dependency>
 	</dependencies>
 
 	<build>
+		<defaultGoal>install</defaultGoal>
+
 		<plugins>
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
@@ -120,68 +110,5 @@
 			</plugin>
 		</plugins>
 	</build>
-
-	<repositories>
-		<repository>
-			<id>fusesource</id>
-			<url>https://repo.fusesource.com/nexus/content/groups/public/</url>
-			<snapshots>
-				<enabled>false</enabled>
-			</snapshots>
-			<releases>
-				<enabled>true</enabled>
-			</releases>
-		</repository>
-		<repository>
-			<id>fusesource.snapshot</id>
-			<url>https://repo.fusesource.com/nexus/content/groups/public-snapshots/</url>
-			<snapshots>
-				<enabled>true</enabled>
-			</snapshots>
-			<releases>
-				<enabled>false</enabled>
-			</releases>
-		</repository>
-		<repository>
-			<id>apache-public</id>
-			<url>https://repository.apache.org/content/groups/public/</url>
-			<snapshots>
-				<enabled>true</enabled>
-			</snapshots>
-			<releases>
-				<enabled>true</enabled>
-			</releases>
-		</repository>
-		<repository>
-			<id>jboss.repository.releases</id>
-			<name>JBoss Repository Releases</name>
-			<url>https://repository.jboss.org/nexus/content/repositories/releases</url>
-		</repository>
-		<repository>
-			<id>central</id>
-			<url>https://repo1.maven.org/maven2</url>
-			<releases>
-				<enabled>true</enabled>
-			</releases>
-		</repository>
-		<repository>
-			<id>java.net</id>
-			<name>java.net</name>
-			<url>http://download.java.net/maven/2/</url>
-		</repository>
-		<repository>
-			<id>google</id>
-			<name>Google</name>
-			<url>http://google-maven-repository.googlecode.com/svn/repository/</url>
-		</repository>
-		<repository>
-			<id>senomas.github</id>
-			<url>https://raw.githubusercontent.com/senomas/mvn-repo/master/</url>
-			<snapshots>
-				<enabled>true</enabled>
-				<updatePolicy>always</updatePolicy>
-			</snapshots>
-		</repository>
-	</repositories>
 
 </project>
